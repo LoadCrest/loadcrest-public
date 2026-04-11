@@ -273,6 +273,42 @@
       font-weight: 700;
     }
 
+    /* ── Benefit cards ── */
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .benefit-card {
+      background: var(--lc-dark-2);
+      border-radius: 16px;
+      padding: 28px 30px;
+    }
+    .benefit-icon {
+      font-size: 32px; margin-bottom: 12px;
+    }
+    .benefit-tag {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--lc-teal); margin-bottom: 8px;
+    }
+    .benefit-title {
+      font-size: 17px; font-weight: 700; color: var(--white);
+      margin-bottom: 10px; line-height: 1.2;
+    }
+    .benefit-body {
+      font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
+      line-height: 1.6; margin-bottom: 14px;
+    }
+    .benefit-analogy {
+      font-size: 12px; font-weight: 400; font-style: italic;
+      color: rgba(106,191,174,0.8); border-left: 2px solid rgba(106,191,174,0.3);
+      padding-left: 12px; line-height: 1.5;
+    }
+    @media (max-width: 620px) {
+      .benefits { grid-template-columns: 1fr; }
+    }
+
     /* ── Footer ── */
     .footer {
       margin-top: 36px;
@@ -404,6 +440,42 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- Benefit cards -->
+  <div class="benefits">
+
+    <div class="benefit-card">
+      <div class="benefit-icon">🟢</div>
+      <div class="benefit-tag">Benefit 1 — Grid Interconnection</div>
+      <div class="benefit-title">The on-ramp gets approved faster</div>
+      <div class="benefit-body">
+        Because LoadCrest guarantees a smooth, predictable load profile at the grid interface,
+        the utility sees orderly, ramp-rate-compliant traffic — not a volatile AI load that
+        triggers a multi-year System Impact Study. First-submission interconnection approval
+        becomes achievable, collapsing a 6–24 month bottleneck.
+      </div>
+      <div class="benefit-analogy">
+        "The highway authority approves the on-ramp faster when the merging traffic is predictable."
+      </div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon">📉</div>
+      <div class="benefit-tag">Benefit 2 — Demand Charge Avoidance</div>
+      <div class="benefit-title">Smoother traffic means lower fuel costs per trip</div>
+      <div class="benefit-body">
+        Utilities bill large customers on peak demand ($/kW), not just energy consumed.
+        Unmanaged AI workloads spike the meter, triggering higher demand charge tiers.
+        LoadCrest's active stabilization smooths those spikes before they reach the meter —
+        reducing peak demand readings and lowering the monthly utility bill.
+        The $/kW-month fee can be partially offset by the demand charges it eliminates.
+      </div>
+      <div class="benefit-analogy">
+        "Stop-and-go traffic burns more fuel. The toll road keeps traffic moving — every trip costs less."
+      </div>
+    </div>
+
   </div>
 
   <!-- Key insight -->
