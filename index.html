@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="brand/brand.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: #15182D;
-      color: #fff;
+      background: #F8FAFC;
+      color: #0F172A;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -18,36 +19,108 @@
       justify-content: center;
       padding: 48px 24px;
     }
-    .brand-name { font-size: 28px; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 4px; }
-    .brand-sub { font-size: 11px; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 48px; }
-    .links { display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 420px; }
+
+    .logo { height: 36px; display: block; margin-bottom: 10px; }
+
+    .brand-sub {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #008FC5;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+    }
+
     .link-card {
       display: block;
-      background: #22325F;
-      border: 1px solid rgba(0,143,197,0.25);
+      background: #FFFFFF;
+      border: 1px solid rgba(34, 79, 129, 0.14);
       border-radius: 12px;
-      padding: 20px 24px;
+      padding: 18px 22px;
       text-decoration: none;
-      transition: border-color 0.15s, background 0.15s;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      box-shadow: 0 1px 3px rgba(34,79,129,0.06);
     }
-    .link-card:hover { border-color: rgba(0,143,197,0.6); background: rgba(14,69,148,0.4); }
-    .link-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .link-desc { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.5); }
-    .section-label {
-      font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-      color: rgba(255,255,255,0.3); margin-top: 28px; margin-bottom: 4px; width: 100%; max-width: 420px;
+    .link-card:hover {
+      border-color: rgba(0,143,197,0.45);
+      box-shadow: 0 2px 8px rgba(0,143,197,0.12);
     }
+    .link-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #224F81;
+      margin-bottom: 3px;
+    }
+    .link-desc {
+      font-size: 11px;
+      font-weight: 400;
+      color: #64748B;
+      line-height: 1.5;
+    }
+
     .badge {
-      display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px;
-      border-radius: 4px; margin-left: 8px; vertical-align: middle; letter-spacing: 0.04em;
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 7px;
+      vertical-align: middle;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-    .badge-b { background: rgba(0,143,197,0.18); color: #63C5EA; border: 1px solid rgba(0,143,197,0.35); }
-    .badge-c { background: rgba(30,180,100,0.15); color: #5CE8A0; border: 1px solid rgba(30,180,100,0.35); }
+    .badge-b {
+      background: rgba(0,143,197,0.10);
+      color: #008FC5;
+      border: 1px solid rgba(0,143,197,0.25);
+    }
+    .badge-c {
+      background: rgba(106,191,174,0.12);
+      color: #3D9E8E;
+      border: 1px solid rgba(106,191,174,0.35);
+    }
+
+    .divider {
+      width: 100%;
+      max-width: 420px;
+      height: 1px;
+      background: rgba(34,79,129,0.08);
+      margin-top: 36px;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 9px;
+      font-weight: 400;
+      color: #94A3B8;
+      letter-spacing: 0.05em;
+    }
   </style>
 </head>
 <body>
-  <div class="brand-name">LoadCrest</div>
+  <img class="logo" src="brand/logos/Logo.svg" alt="LoadCrest" />
   <div class="brand-sub">AI Data Center Power Infrastructure</div>
+
   <div class="section-label">Pricing &amp; Economics</div>
   <div class="links">
     <a class="link-card" href="pricing-model.html">
@@ -64,12 +137,15 @@
   <div class="links">
     <a class="link-card" href="https://drive.google.com/file/d/10WNEV8wojDxUqFbeYAVAPManCgyjEmWo/view?usp=sharing" target="_blank">
       <div class="link-title">SAFE Offering Teaser <span class="badge badge-b">506(b)</span></div>
-      <div class="link-desc">Seed round · $10M post-money cap · 20% discount · $50K minimum · access granted individually</div>
+      <div class="link-desc">Seed round · $35M post-money cap · 20% discount · access granted individually</div>
     </a>
     <a class="link-card" href="safe-teaser-506c-2026-04-13.pdf" target="_blank">
       <div class="link-title">SAFE Offering Teaser <span class="badge badge-c">506(c)</span></div>
-      <div class="link-desc">Seed round · $10M post-money cap · 20% discount · $50K minimum · verified accredited investors</div>
+      <div class="link-desc">Seed round · $35M post-money cap · 20% discount · $50K minimum · verified accredited investors</div>
     </a>
   </div>
+
+  <div class="divider"></div>
+  <div class="footer">LoadCrest, Inc. &mdash; Confidential &middot; May 2026</div>
 </body>
 </html>

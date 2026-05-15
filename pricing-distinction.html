@@ -9,23 +9,25 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --lc-blue:   #224F81;
-      --lc-sky:    #008FC5;
-      --lc-teal:   #6ABFAE;
-      --lc-deep:   #0E4594;
-      --lc-dark-1: #15182D;
-      --lc-dark-2: #22325F;
-      --lc-ice:    #EDF6F6;
-      --white:     #FFFFFF;
-      --energy:    #C97A2A;
-      --energy-bg: rgba(201,122,42,0.12);
-      --energy-border: rgba(201,122,42,0.3);
+      --navy:          #224F81;
+      --sky:           #008FC5;
+      --teal:          #6ABFAE;
+      --deep:          #0E4594;
+      --chalk:         #F8FAFC;
+      --white:         #FFFFFF;
+      --ink:           #0F172A;
+      --slate:         #64748B;
+      --border:        rgba(34, 79, 129, 0.12);
+      --shadow:        0 1px 4px rgba(34,79,129,0.07);
+      --energy:        #C97A2A;
+      --energy-bg:     rgba(201,122,42,0.07);
+      --energy-border: rgba(201,122,42,0.22);
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--lc-dark-1);
-      color: var(--white);
+      background: var(--chalk);
+      color: var(--ink);
       min-height: 100vh;
       padding: 48px 24px 64px;
     }
@@ -40,17 +42,27 @@
       margin-bottom: 52px;
     }
     .header-eyebrow {
-      font-size: 10px; font-weight: 400; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--lc-teal); margin-bottom: 6px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 6px;
     }
     .header-title {
-      font-size: 26px; font-weight: 700; line-height: 1.2; color: var(--white);
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
     }
     .brand { text-align: right; }
     .brand img { height: 32px; display: block; margin-left: auto; margin-bottom: 4px; }
     .brand-sub {
-      font-size: 9px; font-weight: 300; letter-spacing: 0.08em;
-      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      font-size: 9px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
     }
 
     /* ── Two-column split ── */
@@ -68,40 +80,49 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      box-shadow: var(--shadow);
     }
     .panel-energy {
       background: var(--energy-bg);
       border: 1px solid var(--energy-border);
     }
     .panel-lc {
-      background: rgba(14,69,148,0.25);
-      border: 1px solid rgba(0,143,197,0.35);
+      background: rgba(0,143,197,0.05);
+      border: 1px solid rgba(0,143,197,0.22);
     }
 
     .panel-tag {
-      font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; margin-bottom: 4px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
     }
     .panel-energy .panel-tag { color: var(--energy); }
-    .panel-lc .panel-tag     { color: var(--lc-sky); }
+    .panel-lc .panel-tag     { color: var(--sky); }
 
     .panel-role {
-      font-size: 20px; font-weight: 700; line-height: 1.2; color: var(--white);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
     }
 
-    .panel-icon {
-      font-size: 52px; line-height: 1; margin: 4px 0;
-    }
+    .panel-icon { font-size: 52px; line-height: 1; margin: 4px 0; }
 
     .panel-analogy {
-      font-size: 28px; font-weight: 900; letter-spacing: -0.02em;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
       line-height: 1;
     }
     .panel-energy .panel-analogy { color: var(--energy); }
-    .panel-lc .panel-analogy     { color: var(--lc-sky); }
+    .panel-lc .panel-analogy     { color: var(--sky); }
 
     .panel-desc {
-      font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 400;
+      color: #475569;
       line-height: 1.6;
     }
 
@@ -114,27 +135,20 @@
       margin-top: auto;
     }
     .panel-energy .price-pill {
-      background: rgba(201,122,42,0.15);
-      border: 1px solid rgba(201,122,42,0.3);
+      background: rgba(201,122,42,0.10);
+      border: 1px solid rgba(201,122,42,0.25);
     }
     .panel-lc .price-pill {
-      background: rgba(0,143,197,0.15);
-      border: 1px solid rgba(0,143,197,0.35);
+      background: rgba(0,143,197,0.08);
+      border: 1px solid rgba(0,143,197,0.22);
     }
-    .price-value {
-      font-size: 22px; font-weight: 700;
-    }
+    .price-value { font-size: 22px; font-weight: 700; }
     .panel-energy .price-value { color: var(--energy); }
-    .panel-lc .price-value     { color: var(--lc-sky); }
-    .price-unit {
-      font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.5);
-    }
-    .price-label {
-      font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.45);
-      margin-top: 5px;
-    }
+    .panel-lc .price-value     { color: var(--sky); }
+    .price-unit  { font-size: 12px; font-weight: 400; color: var(--slate); }
+    .price-label { font-size: 11px; font-weight: 300; color: var(--slate); margin-top: 5px; }
 
-    /* ── Divider with NOT ── */
+    /* ── Divider ── */
     .divider {
       display: flex;
       flex-direction: column;
@@ -143,63 +157,68 @@
       padding: 0 20px;
       gap: 12px;
     }
-    .divider-line {
-      width: 1px;
-      flex: 1;
-      background: rgba(255,255,255,0.08);
-    }
+    .divider-line { width: 1px; flex: 1; background: var(--border); }
     .divider-badge {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: rgba(255,255,255,0.25);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #94A3B8;
       white-space: nowrap;
+      text-align: center;
     }
 
     /* ── Flow diagram ── */
     .flow-section {
-      background: var(--lc-dark-2);
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 32px 36px;
       margin-bottom: 24px;
+      box-shadow: var(--shadow);
     }
     .flow-title {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
-      text-transform: uppercase; color: var(--lc-teal); margin-bottom: 28px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 28px;
     }
-    .flow {
-      display: flex;
-      align-items: center;
-      gap: 0;
-    }
-    .flow-node {
-      flex: 1;
-      text-align: center;
-    }
-    .flow-node-icon {
-      font-size: 28px; margin-bottom: 8px;
-    }
+    .flow { display: flex; align-items: center; gap: 0; }
+    .flow-node { flex: 1; text-align: center; }
+    .flow-node-icon { font-size: 28px; margin-bottom: 8px; }
     .flow-node-label {
-      font-size: 11px; font-weight: 600; color: var(--white);
-      text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
     .flow-node-sub {
-      font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.4);
-      margin-top: 3px; line-height: 1.3;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--slate);
+      margin-top: 3px;
+      line-height: 1.3;
     }
     .flow-node-price {
       display: inline-block;
       margin-top: 8px;
-      font-size: 11px; font-weight: 600;
-      padding: 3px 9px; border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 5px;
     }
     .flow-node-price.energy-price {
-      background: rgba(201,122,42,0.15);
+      background: rgba(201,122,42,0.08);
       color: var(--energy);
-      border: 1px solid rgba(201,122,42,0.3);
+      border: 1px solid rgba(201,122,42,0.22);
     }
     .flow-node-price.lc-price {
-      background: rgba(0,143,197,0.15);
-      color: var(--lc-sky);
-      border: 1px solid rgba(0,143,197,0.3);
+      background: rgba(0,143,197,0.08);
+      color: var(--sky);
+      border: 1px solid rgba(0,143,197,0.22);
     }
 
     .flow-arrow {
@@ -221,23 +240,14 @@
       border: 5px solid transparent;
       border-left: 7px solid currentColor;
     }
-    .flow-arrow-line.energy-arrow {
-      background: rgba(201,122,42,0.4);
-      color: rgba(201,122,42,0.4);
-    }
-    .flow-arrow-line.lc-arrow {
-      background: rgba(0,143,197,0.4);
-      color: rgba(0,143,197,0.4);
-    }
-    .flow-arrow-label {
-      font-size: 9px; font-weight: 400; color: rgba(255,255,255,0.3);
-      margin-top: 6px; white-space: nowrap;
-    }
+    .flow-arrow-line.energy-arrow { background: rgba(201,122,42,0.35); color: rgba(201,122,42,0.35); }
+    .flow-arrow-line.lc-arrow     { background: rgba(0,143,197,0.35); color: rgba(0,143,197,0.35); }
+    .flow-arrow-label { font-size: 9px; font-weight: 400; color: #94A3B8; margin-top: 6px; white-space: nowrap; }
 
-    .flow-node.lc-node .flow-node-label { color: var(--lc-sky); }
+    .flow-node.lc-node .flow-node-label { color: var(--sky); }
     .flow-node.lc-node .flow-node-icon {
-      background: rgba(14,69,148,0.3);
-      border: 1px solid rgba(0,143,197,0.3);
+      background: rgba(0,143,197,0.07);
+      border: 1px solid rgba(0,143,197,0.2);
       border-radius: 12px;
       display: inline-block;
       padding: 8px 14px;
@@ -247,31 +257,37 @@
     .insight {
       border-radius: 16px;
       padding: 28px 36px;
-      background: linear-gradient(135deg, rgba(14,69,148,0.35) 0%, rgba(34,79,129,0.2) 100%);
-      border: 1px solid rgba(0,143,197,0.25);
+      background: rgba(34,79,129,0.05);
+      border: 1px solid rgba(34,79,129,0.14);
       display: flex;
       align-items: flex-start;
       gap: 20px;
       margin-bottom: 24px;
     }
     .insight-quote-mark {
-      font-size: 72px; font-weight: 900; color: rgba(0,143,197,0.2);
-      line-height: 0.8; flex-shrink: 0; margin-top: 8px;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(0,143,197,0.15);
+      line-height: 0.8;
+      flex-shrink: 0;
+      margin-top: 8px;
     }
     .insight-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
-      text-transform: uppercase; color: var(--lc-sky); margin-bottom: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 10px;
     }
     .insight-text {
-      font-size: 17px; font-weight: 400; color: var(--white);
+      font-size: 17px;
+      font-weight: 400;
+      color: #334155;
       line-height: 1.6;
     }
-    .insight-text em {
-      font-style: normal; color: var(--lc-sky); font-weight: 600;
-    }
-    .insight-text strong {
-      font-weight: 700;
-    }
+    .insight-text em  { font-style: normal; color: var(--sky); font-weight: 600; }
+    .insight-text strong { font-weight: 700; color: var(--navy); }
 
     /* ── Benefit cards ── */
     .benefits {
@@ -281,48 +297,62 @@
       margin-bottom: 24px;
     }
     .benefit-card {
-      background: var(--lc-dark-2);
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 28px 30px;
+      box-shadow: var(--shadow);
     }
-    .benefit-icon {
-      font-size: 32px; margin-bottom: 12px;
-    }
+    .benefit-icon { font-size: 32px; margin-bottom: 12px; }
     .benefit-tag {
-      font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--lc-teal); margin-bottom: 8px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
     }
     .benefit-title {
-      font-size: 17px; font-weight: 700; color: var(--white);
-      margin-bottom: 10px; line-height: 1.2;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.2;
     }
     .benefit-body {
-      font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7);
-      line-height: 1.6; margin-bottom: 14px;
+      font-size: 13px;
+      font-weight: 400;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 14px;
     }
     .benefit-analogy {
-      font-size: 12px; font-weight: 400; font-style: italic;
-      color: rgba(106,191,174,0.8); border-left: 2px solid rgba(106,191,174,0.3);
-      padding-left: 12px; line-height: 1.5;
-    }
-    @media (max-width: 620px) {
-      .benefits { grid-template-columns: 1fr; }
+      font-size: 12px;
+      font-weight: 400;
+      font-style: italic;
+      color: #3D9E8E;
+      border-left: 2px solid rgba(106,191,174,0.35);
+      padding-left: 12px;
+      line-height: 1.5;
     }
 
     /* ── Footer ── */
     .footer {
       margin-top: 36px;
-      display: flex; align-items: center; justify-content: space-between;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
       padding-top: 18px;
     }
-    .footer-note { font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.25); }
-    .footer-date { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.2); }
+    .footer-note { font-size: 10px; font-weight: 400; color: #94A3B8; }
+    .footer-date { font-size: 10px; font-weight: 400; color: #94A3B8; letter-spacing: 0.06em; }
 
     @media (max-width: 620px) {
       .split { grid-template-columns: 1fr; }
       .divider { flex-direction: row; padding: 16px 0; }
       .divider-line { flex: 1; width: auto; height: 1px; }
+      .benefits { grid-template-columns: 1fr; }
       .flow { flex-direction: column; gap: 16px; }
       .flow-arrow { flex-direction: row; padding: 4px 0; }
       .flow-arrow-line { width: 2px; height: 32px; }
@@ -346,7 +376,7 @@
       <div class="header-title">Energy Cost vs. Infrastructure Value</div>
     </div>
     <div class="brand">
-      <img src="brand/logos/Logo_white.svg" alt="LoadCrest" />
+      <img src="brand/logos/Logo.svg" alt="LoadCrest" />
       <div class="brand-sub">AI Data Center Power Infrastructure</div>
     </div>
   </div>
@@ -354,7 +384,6 @@
   <!-- Two-column split -->
   <div class="split">
 
-    <!-- Energy panel -->
     <div class="panel panel-energy">
       <div>
         <div class="panel-tag">Energy Provider</div>
@@ -374,14 +403,12 @@
       </div>
     </div>
 
-    <!-- Divider -->
     <div class="divider">
       <div class="divider-line"></div>
       <div class="divider-badge">not the<br/>same as</div>
       <div class="divider-line"></div>
     </div>
 
-    <!-- LoadCrest panel -->
     <div class="panel panel-lc">
       <div>
         <div class="panel-tag">LoadCrest</div>
@@ -496,8 +523,8 @@
 
   <!-- Footer -->
   <div class="footer">
-    <div class="footer-note">Internal — do not distribute without sign-off.</div>
-    <div class="footer-date">April 2026</div>
+    <div class="footer-note">LoadCrest, Inc. — Confidential</div>
+    <div class="footer-date">May 2026</div>
   </div>
 
 </div>
